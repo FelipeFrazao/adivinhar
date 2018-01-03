@@ -1,8 +1,10 @@
+import random
+
 print("*********************************")
 print("Bem vindo ao jogo de Adivinhação!")
 print("*********************************")
 
-numero_screto = 23
+numero_screto = round(random.randrange(1,101))
 tentativas = 5
 
 while (tentativas > 0) :
