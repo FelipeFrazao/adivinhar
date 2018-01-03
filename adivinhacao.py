@@ -5,9 +5,21 @@ print("Bem vindo ao jogo de Adivinhação!")
 print("*********************************")
 
 numero_screto = round(random.randrange(1,101))
-tentativas = 5
+tentativas = 0
 
-while (tentativas > 0) :
+print("Selecione um nivel de dificuldade")
+print("(1) Fácil (2) Médio (3) Difícil")
+
+nivel = int(input("Nivel de dificuldade: "))
+
+if nivel == 1:
+    tentativas = 15
+elif nivel == 2:
+    tentativas = 10
+else:
+    tentativas = 5
+
+while (tentativas > 0):
 
     print("Você tem {} tentativas use-as com cuidado".format(tentativas))
     print("")
@@ -25,14 +37,14 @@ while (tentativas > 0) :
     if (acertou) :
         print("Parabéns voce ganhou o jogo!")
         break
-    else :
-        if (maior) :
+    else:
+        if (maior):
             print("Errou, seu chute foi maior que o número")
             print("")
-        elif(menor) :
+        elif(menor):
             print("Errou, seu chute foi menor que o número")
             print("")
         tentativas -=1
 
-if (tentativas == 0) :
+if (tentativas == 0):
     print("Você perdeu")
