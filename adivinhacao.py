@@ -54,12 +54,11 @@ def jogar():
                 print("Errou, seu chute foi menor que o número")
                 print("")
             tentativas -=1
+            if (tentativas == 0):
+                print("Você perdeu")
 
         pontos_perdidos = abs(numero_screto - chute_int)
         pontos -= pontos_perdidos
-
-    if (tentativas == 0):
-        print("Você perdeu")
 
 if(__name__ == "__main__"):
     jogar()
