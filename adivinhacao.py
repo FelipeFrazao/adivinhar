@@ -1,12 +1,12 @@
 import random
 
-def jogar():
 
+def jogar():
     print("*********************************")
     print("Bem vindo ao jogo de Adivinhação!")
     print("*********************************")
 
-    numero_screto = round(random.randrange(1,101))
+    numero_screto = round(random.randrange(1, 101))
     tentativas = 0
     pontos = 1000
 
@@ -50,15 +50,16 @@ def jogar():
             if (maior):
                 print("Errou, seu chute foi maior que o número")
                 print("")
-            elif(menor):
+            elif (menor):
                 print("Errou, seu chute foi menor que o número")
                 print("")
-            tentativas -=1
+            tentativas -= 1
             if (tentativas == 0):
                 print("Você perdeu")
 
         pontos_perdidos = abs(numero_screto - chute_int)
         pontos -= pontos_perdidos
 
-if(__name__ == "__main__"):
+
+if (__name__ == "__main__"):
     jogar()
