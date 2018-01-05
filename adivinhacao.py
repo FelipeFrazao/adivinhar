@@ -1,20 +1,16 @@
 import random
 
-
-def jogar():
+def exibe_mensagem():
     print("*********************************")
     print("Bem vindo ao jogo de Adivinhação!")
     print("*********************************")
 
-    numero_screto = round(random.randrange(1, 101))
-    tentativas = 0
-    pontos = 1000
-
-    print("Selecione um nivel de dificuldade")
-    print("(1) Fácil (2) Médio (3) Difícil")
-    print("")
+def define_nivel():
 
     nivel = int(input("Nivel de dificuldade: "))
+    print("")
+    print("Selecione um nivel de dificuldade")
+    print("(1) Fácil (2) Médio (3) Difícil")
     print("")
 
     if nivel == 1:
@@ -23,6 +19,14 @@ def jogar():
         tentativas = 10
     else:
         tentativas = 5
+
+    return tentativas
+
+def jogar():
+
+    numero_screto = round(random.randrange(1, 101))
+    tentativas = define_nivel()
+    pontos = 1000
 
     while (tentativas > 0):
 
